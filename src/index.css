@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Monda;
+    src: url(./assets/Monda-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Monda;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
