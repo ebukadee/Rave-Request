@@ -6,8 +6,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#fffff2",
-        dark: "#1D2123",
-        hint: '#0000005e',
+        dark: "#181818",
+        hint: '#646464',
         mid:"#afafaf"
        
       },

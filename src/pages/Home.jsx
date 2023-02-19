@@ -32,7 +32,7 @@ const Home = () => {
                 Search
               </button>
             </form>
-            <Link to="/Jockey">join as DJ</Link>
+            <Link to="/Jockey"><h5 className=" text-xs underline text-blue-400">join as dj</h5></Link>
 
             {/* <a href="#" className="text-xs underline text-hint ">
               join as DJ

@@ -1,28 +1,29 @@
+import Logo from "../assets/logo.svg";
+import header from "../assets/header.svg";
+import Avater from "../assets/Avater.jfif";
+import stats from "../utils/stats";
+
 const Jockey = () => {
   return (
-    //<-------------------------------------- Hero section---------------------------------------------------------------->
-    <div className=" overflow-hidden flex h-auto  relative bg-[#609EAF] w-[100%]   rounded-[40px] top-0 px-6 py-4  lg:w-[800px] ">
-      <div>
-        <h5 className="pl-[20px] pt-[10px] font-extralight text-xs   lg:pt-[38px] ">
-          Currated playlist
-        </h5>
-        <div className="  mt-[300px] pl-[20px]   lg:mt-[85px] ">
-          <h1 className="text-[35px] font-bold    ">R & B Hits</h1>
-          <p className="max-w-[15rem] text-sm font-extralight  lg:text-xs   ">
-            All mine, Lie again, Petty call me everyday, Out of time, No love,
-            Bad habit, and so much more
-          </p>
-          <div className="   flex items-center pt-[40px] pb-[20px]    ">
-            <span className="pl-2">&nbsp;</span>
-           
-            <h3 className="pl-[2px] ">33k Likes</h3>
-          </div>
+    <section className="bg-primary h-screen ">
+      <div className="flex">
+        <img src={Logo} alt="Logo" className=" w-16  mt-4 ml-4 " />
+        <img src={header} alt="logo text" className="w-32  mt-4 ml-4" />
+      </div>
+
+      <div className=" flex flex-row ">
+        <div className="flex flex-col ml-20 ">
+          {stats.map((stat) => (
+            <div key={stat.key}>
+              <div>
+                <h3 className="text-[100px] text-center">{stat.num}</h3>
+                <h5 className="ml-2 text-center">{stat.title}</h5>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <span>      
-       
-      </span>
-    </div>
+    </section>
   );
 };
 
