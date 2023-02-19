@@ -2,7 +2,6 @@ import Logo from "../assets/logo.svg";
 import header from "../assets/header.svg";
 import Avater from "../assets/Avater.jfif";
 import stats from "../utils/stats";
-import 
 
 const Jockey = () => {
   return (
@@ -27,7 +26,7 @@ const Jockey = () => {
       </aside>
       <div className="h-1/4 w-1/2 -ml-40 bg-dark flex flex-row display: absolute top-16 left-1/3 rounded-3xl">
         <img src={Avater} alt="image of avater" className="rounded-full  h-32 ml-14 mt-6"/>
-        <h1 className="m-auto text-xl text-white text-4xl display: relative bottom-5 left-16">DJ DEVOID</h1>
+        <h1 className="m-auto  text-white text-4xl display: relative bottom-5 left-16">DJ DEVOID</h1>
       </div>
       <div className="">
         <img src="" alt="" />
