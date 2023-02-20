@@ -105,5 +105,3 @@ import img10 from '../assets/img 10.jfif'
 ]
 
 
-
-// export default {stats, recents}
