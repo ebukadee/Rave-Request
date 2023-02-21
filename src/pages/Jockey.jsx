@@ -1,5 +1,5 @@
 import Traffic from "../components/Traffic";
-import RecentPlay from "../components/recentPlay";
+import RecentlyPlayed from "../components/RecentlyPlayed";
 import TopRequests from "../components/TopRequests";
 import Dashboard from "../components/Dashboard";
 import Trending from "../components/Trending";
@@ -10,10 +10,10 @@ const Jockey = () => {
       <Traffic />
       <div className="  relative w-[700px] top-20 left-16">
         <Dashboard />
-        <RecentPlay />
+        <RecentlyPlayed />
       </div>
-      <TopRequests />
-      <Trending />
+      {/* <TopRequests />
+      <Trending /> */}
     </section>
   );
 };
