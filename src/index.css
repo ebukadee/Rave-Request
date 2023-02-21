@@ -2,6 +2,10 @@
     font-family: Monda;
     src: url(./assets/Monda-Regular.ttf);
 }
+html{
+    scroll-behavior: smooth;
+
+}
 
 *{
     padding: 0;

@@ -8,12 +8,11 @@ const Jockey = () => {
   return (
     <section className="bg-primary h-screen flex ">
       <Traffic />
-      <div className="  relative w-[700px] top-20 left-16">
+      <div className="  relative w-[700px] top-20 left-64">
         <Dashboard />
         <RecentlyPlayed />
+        <Trending />
       </div>
-      {/* <TopRequests />
-      <Trending /> */}
     </section>
   );
 };

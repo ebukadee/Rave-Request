@@ -4,7 +4,7 @@ import header from '../assets/header.svg'
 
 const Traffic = () => {
   return (
-    <aside>
+    <aside className="fixed">
       <div className="flex">
         <img src={Logo} alt="Logo" className=" w-16  mt-4 ml-4 " />
         <img src={header} alt="logo text" className="w-32  mt-4 ml-4" />
@@ -15,7 +15,7 @@ const Traffic = () => {
             <div key={stat.key}>
               <div className={stat.key === 1 ? "" : " mt-16"}>
                 <h3 className="text-[80px] text-center">0{stat.num}</h3>
-                <h5 className="ml-2 text-center">{stat.title}</h5>
+                <h5 className=" text-center">{stat.title}</h5>
               </div>
             </div>
           ))}
