@@ -102,20 +102,20 @@ import img25 from '../assets/images/img 25.jfif'
 
     },{
         img:img9,
-        song:'Night walk',
-        artist: 'james',
+        song:'love at first sight',
+        artist: 'devoid',
         key: 9
 
     },{
         img:img10,
-        song:'Night walk',
-        artist: 'james',
+        song:'down',
+        artist: 'king',
         key: 10
 
     },{
         img:img11,
-        song:'Night walk',
-        artist: 'james',
+        song:'suicide',
+        artist: 'jk',
         key: 11
 
     }
@@ -180,56 +180,56 @@ export const trends = [
 
     },{
         img:img19,
-        song:'Night walk',
-        artist: 'james',
+        song:'felony',
+        artist: 'CK',
         time: '5:05',
 
         key: 8
 
     },{
         img:img20,
-        song:'Night walk',
-        artist: 'james',
+        song:'watawi',
+        artist: 'Ckay',
         time: '5:05',
 
         key: 9
 
     },{
         img:img21,
-        song:'Night walk',
-        artist: 'james',
+        song:'soso',
+        artist: 'omah lay',
         time: '5:05',
 
         key: 10
 
     },{
         img:img22,
-        song:'Night walk',
-        artist: 'james',
+        song:'lover',
+        artist: 'ksi',
         time: '5:05',
 
         key: 11
 
     },{
         img:img23,
-        song:'Night walk',
-        artist: 'james',
+        song:'yesterday',
+        artist: 'zed',
         time: '5:05',
 
         key: 12
 
     },{
         img:img24,
-        song:'Night walk',
-        artist: 'james',
+        song:'calm',
+        artist: 'never',
         time: '5:05',
 
         key: 13
 
     },{
         img:img25,
-        song:'Night walk',
-        artist: 'james',
+        song:'bad guy',
+        artist: 'billie elish',
         time: '5:05',
 
         key: 14

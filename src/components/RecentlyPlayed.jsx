@@ -30,7 +30,7 @@ const RecentlyPlayed = () => {
         <h3 className="text-[15px] mb-2">Recently Played</h3>
 
         <div
-          className=" h-80 cursor-pointer overflow-hidden "
+          className=" h-60 cursor-pointer overflow-hidden "
           ref={scrollableDivRef}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}

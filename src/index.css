@@ -12,6 +12,10 @@ html{
     margin: 0;
     font-family: Monda;
 }
+*::selection{
+    background-color: #afafaf;
+
+}
 
 @tailwind base;
 @tailwind components;

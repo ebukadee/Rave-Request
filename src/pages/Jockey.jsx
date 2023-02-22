@@ -13,6 +13,7 @@ const Jockey = () => {
         <RecentlyPlayed />
         <Trending />
       </div>
+      <TopRequests />
     </section>
   );
 };

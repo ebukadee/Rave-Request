@@ -10,11 +10,11 @@ const Trending = () => {
       <div>
         {trends.map((trend) => (
           <div key={trend.key}>
-            <div className=" grid grid-cols-7 gap-5 mt-4 rounded-xl  items-center">
+            <div className=" grid grid-cols-7 gap-3  rounded-xl  items-center">
               <h3 className="ml-8 text-sm">#{trend.key}</h3>
-              <img src={trend.img} className="w-8 h-8 rounded-full " />
-             <h3 className="text-xs">{trend.artist}</h3>
-              <h3 className="text-xs">{trend.song}</h3>
+              <img src={trend.img} className="w-8 h-8 rounded-full m-auto " />
+             <h3 className="text-xs text-center">{trend.artist}</h3>
+              <h3 className="text-xs  text-center">{trend.song}</h3>
               <span className="flex">
               <Clock size={15}/>
               <h3 className="text-xs pl-2">{trend.time}</h3>
