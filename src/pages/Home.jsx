@@ -12,6 +12,7 @@ const Home = () => {
 
   return (
     <>
+      <MusicData />
       <section className="bg-primary h-screen  " id="home">
         <div className="relative top-32">
           <img src={Logo} alt="logo" className=" w-24  mx-auto " />
