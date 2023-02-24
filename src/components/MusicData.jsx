@@ -22,7 +22,7 @@ const getMusic = () => {
 };
 const MusicData = () => {
   const { isLoading, isError, data, error } = useQuery("musicData", getMusic);
-  console.log(data?.data.tracks[0])
+  console.log(data?.data.tracks[0]);
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -30,28 +30,8 @@ const MusicData = () => {
 
   if (isError) {
     return <p>Error: {error.message}</p>;
-  } else {
-    return(
-      // <div>
-      //   {data?.data.tracks.map((track)=>(
-      //     <div key={track.data.id}>
-      //     <h3>{track.data.name}</h3>
-
-      //     </div>
-      //   ))}
-      // </div>
-      ""
-    );
   }
-
-  // return (<div>{
-
-  //   // data.data.albums.items.map((what)=>{
-  //   //   <>
-  //   //   <h3>{JSON.stringify(what)}</h3>
-  //   //   </>
-  //   // })
-  //   }</div>);
+  return "";
 };
 
-export default MusicData;
+// export default MusicData;

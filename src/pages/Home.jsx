@@ -27,7 +27,6 @@ const Home = () => {
                 id="user_name"
                 autoComplete="off"
                 autoCorrect="off"
-                // onChange={handleUsernameChange}
               />
               <button
                 onClick={handleClick}
