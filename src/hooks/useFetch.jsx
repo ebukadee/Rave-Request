@@ -9,7 +9,7 @@ function useFetch(query, type = "tracks", result = "5", limit = "5") {
   useEffect(() => {
     (async function fetchData() {
       if (!query) {
-        setLoading(false)
+        setLoading(false);
         return;
       }
       setLoading(true);

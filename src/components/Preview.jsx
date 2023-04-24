@@ -38,11 +38,20 @@ const Preview = () => {
           Search
         </button>
       </form>
-      {loading ? <div>Loading...</div> : error && <div>{error.message}:try again maybe you typed in a wrong input</div>}
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        error && (
+          <div>{error.message}:try again maybe you typed in a wrong input</div>
+        )
+      )}
       <div className="absolute w-[300px] mt-16 bg-mid max-h-[300px] overflow-y-auto rounded-b-xl break-words  ">
-        <div className={!searchTerm ? "hidden":""}>
+        <div className={!searchTerm ? "hidden" : ""}>
           {data?.tracks.map((track) => (
-            <div key={track?.data.id} className = " hover:bg-[#959595] transition-colors ease-in cursor-default ">
+            <div
+              key={track?.data.id}
+              className=" hover:bg-[#959595] transition-colors ease-in cursor-default "
+            >
               <div className=" grid grid-cols-2 w-32  rounded-xl ">
                 <img
                   src={track?.data.albumOfTrack.coverArt.sources[1].url}

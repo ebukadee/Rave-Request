@@ -8,7 +8,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
     {/* <Search/> */}
-
   </React.StrictMode>
 );
-

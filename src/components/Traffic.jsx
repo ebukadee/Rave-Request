@@ -1,6 +1,6 @@
 import { stats } from "../utils/stats";
-import Logo from '../assets/logo.svg'
-import header from '../assets/header.svg'
+import Logo from "../assets/logo.svg";
+import header from "../assets/header.svg";
 
 const Traffic = () => {
   return (
