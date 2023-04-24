@@ -1,3 +1,11 @@
+  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
 @font-face {
     font-family: Monda;
     src: url(./assets/Monda-Regular.ttf);
@@ -13,10 +21,35 @@ html{
     font-family: Monda;
 }
 *::selection{
-    background-color: #afafaf;
+    background-color: #7c7c7c;
 
 }
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #cccccc;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
+  }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ 
+  
+
+  
+  html {
+    scrollbar-width: thin;
+  }
+  
+  html::-moz-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
+
+  }
+  
+  
+  
