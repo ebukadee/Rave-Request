@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 
 import useFetch from "../hooks/useFetch";
 import useDebounce from "../hooks/useDebounce";
-import axios from "axios";
 
 const Preview = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,15 +40,13 @@ const Preview = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        error && (
-          <div>{error.message}:try again maybe you typed in a wrong input</div>
-        )
+        error && <div>{error.message}:Don't panic,try again</div>
       )}
       <div className="absolute w-[300px] mt-16 bg-mid max-h-[300px] overflow-y-auto rounded-b-xl break-words  ">
         <div className={!searchTerm ? "hidden" : ""}>
-          {data?.tracks.map((track) => (
+          {data?.tracks?.map((track) => (
             <div
-              key={track?.data.id}
+              key={track?.data?.id}
               className=" hover:bg-[#959595] transition-colors ease-in cursor-default "
             >
               <div className=" grid grid-cols-2 w-32  rounded-xl ">
