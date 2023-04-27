@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import Home from "./pages/Home";
 import Jockey from "./pages/Jockey";
-import Song from "./pages/Song";
+import Song, { songLoader } from "./pages/Song";
 import useFetch from "./hooks/useFetch";
 
 const router = createBrowserRouter([
@@ -14,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/songs/:songId",
     element: <Song />,
+    loader: songLoader
   },
   {
     path: "/jockey",
