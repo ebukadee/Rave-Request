@@ -17,8 +17,3 @@ export default function Song() {
   );
 }
 
-export const songLoader = async ({ params }) => {
-  
-  const [data, loading, error] = useFetch(params.id);
-  return data;
-};

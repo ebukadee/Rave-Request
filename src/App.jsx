@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import Home from "./pages/Home";
 import Jockey from "./pages/Jockey";
-import Song, { songLoader } from "./pages/Song";
+import Song from "./pages/Song";
 import useFetch from "./hooks/useFetch";
 
 const router = createBrowserRouter([
@@ -14,7 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/songs/:songId",
     element: <Song />,
-    loader: songLoader
+    loader: async ({ params }) => {
+      const [data, loading, error] = useFetch("g");
+      return data;
+    },
   },
   {
     path: "/jockey",
