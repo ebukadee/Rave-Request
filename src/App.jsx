@@ -14,7 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/songs/:songId",
     element: <Song />,
-    loader: useFetch()
   },
   {
     path: "/jockey",
