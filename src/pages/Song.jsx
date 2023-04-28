@@ -1,9 +1,7 @@
-import axios from "axios";
-
 import { useLoaderData, useParams } from "react-router-dom";
 
 export default function Song() {
-  const { data } = useLoaderData();
+  const data = useLoaderData();
   const { songId } = useParams();
   return (
     <section className="w-full h-[100vh] bg-primary">
@@ -15,28 +13,4 @@ export default function Song() {
       </div>
     </section>
   );
-}
-
-// loader function
-export async function songLoader({ params }) {
-  const options = {
-    method: "GET",
-    url: "https://spotify23.p.rapidapi.com/tracks/",
-    params: {
-      ids: params.songId,
-    },
-
-    headers: {
-      "X-RapidAPI-Key": import.meta.env.VITE_SPOTIFY_API_KEY,
-      "X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
-    },
-  };
-  try {
-    const response = await axios.request(options);
-    // console.log(response.data);
-    const data = await response.data;
-    return data;
-  } catch (error) {
-    return error;
-  }
 }
