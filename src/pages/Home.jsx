@@ -7,9 +7,9 @@ import Preview from "../components/Preview";
 const Home = () => {
   return (
     <>
-      <section className="bg-primary h-screen  " id="home">
-        <div className="relative top-12">
-          <img src={Logo} alt="logo" className=" w-24  mx-auto " />
+      <section className=" bg bg-primary h-screen" id="home">
+        <div className="relative top-44">
+          <img src={Logo} alt="logo" className=" w-20  mx-auto " />
           <img src={header} alt="logo" className=" mx-auto p-4" />
           <div className="flex flex-col items-center mt-8">
             <h3>What's your jam ✌?</h3>

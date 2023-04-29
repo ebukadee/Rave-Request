@@ -10,15 +10,10 @@
     font-family: Monda;
     src: url(./assets/Monda-Regular.ttf);
 }
-html{
-    scroll-behavior: smooth;
-
-}
-
 *{
-    padding: 0;
-    margin: 0;
-    font-family: Monda;
+  padding: 0;
+  margin: 0;
+  font-family: Monda;
 }
 *::selection{
     background-color: #7c7c7c;
@@ -37,19 +32,31 @@ html{
     border-radius: 20px;
   }
 
- 
-  
-
-  
-  html {
+html{
+    scroll-behavior: smooth;
     scrollbar-width: thin;
-  }
-  
-  html::-moz-scrollbar-thumb {
-    background-color: #313131;
-    border-radius: 20px;
 
-  }
+}  
+
+
+html::-moz-scrollbar-thumb {
+  background-color: #313131;
+  border-radius: 20px;
+
+}
+
+.bg{
+  background:linear-gradient(rgba(204, 204, 204, 0.965) 40%,rgba(204, 204, 204, 0.965)) 40%, url('./src/assets/bg-image/bg.jpg');
+    background-repeat: none;
+    background-size: contain;
+    background-position: center;
   
+}
+
+
+
+
+ 
+
   
   

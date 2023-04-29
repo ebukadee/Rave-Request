@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         QuickSand: ["QuickSand", "sans-serif"],
       },
+     
     },
     screens: {
       xs: "480px",
