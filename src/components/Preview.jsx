@@ -38,33 +38,35 @@ const Preview = () => {
           Search
         </button>
       </form>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        error && <div>{error.message}:Don't panic,try again</div>
-      )}
       <div className="absolute w-[300px] mt-16 bg-mid max-h-[300px] overflow-y-auto rounded-b-xl break-words  ">
-        <div className={!searchTerm ? "hidden" : ""}>
-          {data?.tracks?.map((track) => (
-            <Link to={`/songs/${track?.data?.id}`} key={track?.data?.id}>
-              <div className=" hover:bg-[#959595] transition-colors ease-in cursor-default">
-                <div className=" grid grid-cols-2 w-32  rounded-xl ">
-                  <img
-                    src={track?.data.albumOfTrack.coverArt.sources[1].url}
-                    className="w-8 h-8 rounded-full ml-4 "
-                  />
-                  <div className="w-44 ml-2 py-2">
-                    <h3 className="text-[10px]  text-center ">
-                      {track?.data.name}
-                    </h3>
-                    <h3 className="text-[8px] text-hint text-center">
-                      {track?.data.artists.items[0].profile.name}
-                    </h3>
+        <div className={!searchTerm ? "hidden" : "py-12"}>
+          {error ? (
+            <div>{error.message}: Don't panic,try again</div>
+          ) : loading ? (
+            <div>Loading...</div>
+          ) : (
+            data &&
+            data?.tracks?.map((track) => (
+              <Link to={`/songs/${track?.data?.id}`} key={track?.data?.id}>
+                <div className=" hover:bg-[#959595] transition-colors ease-in cursor-default">
+                  <div className=" grid grid-cols-2 w-32  rounded-xl ">
+                    <img
+                      src={track?.data.albumOfTrack.coverArt.sources[1].url}
+                      className="w-8 h-8 rounded-full ml-4 "
+                    />
+                    <div className="w-44 ml-2 py-2">
+                      <h3 className="text-[10px]  text-center ">
+                        {track?.data.name}
+                      </h3>
+                      <h3 className="text-[8px] text-hint text-center">
+                        {track?.data.artists.items[0].profile.name}
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))
+          )}
         </div>
       </div>
     </>
