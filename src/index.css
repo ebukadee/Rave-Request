@@ -1,62 +1,56 @@
-  
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
 
 
 
-@font-face {
+  @font-face {
     font-family: Monda;
     src: url(./assets/Monda-Regular.ttf);
-}
-*{
-  padding: 0;
-  margin: 0;
-  font-family: Monda;
-}
-*::selection{
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: Monda;
+  }
+
+  *::selection {
     background-color: #7c7c7c;
 
-}
-::-webkit-scrollbar {
+  }
+
+  ::-webkit-scrollbar {
     width: 7px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background-color: #cccccc;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background-color: #313131;
     border-radius: 20px;
   }
 
-html{
+  html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
 
-}  
+  }
 
 
-html::-moz-scrollbar-thumb {
-  background-color: #313131;
-  border-radius: 20px;
+  html::-moz-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
 
-}
+  }
 
-.bg{
-  background:linear-gradient(rgba(204, 204, 204, 0.965) 40%,rgba(204, 204, 204, 0.965)) 40%, url('./src/assets/bg-image/bg.jpg');
+  .bg {
+    background: linear-gradient(rgba(255, 255, 242, 0.97) 40%, rgba(255, 255, 242, 0.97)) 40%, url('./src/assets/bg-image/bg.jpg');
     background-repeat: none;
     background-size: contain;
     background-position: center;
-  
-}
 
-
-
-
- 
-
-  
-  
+  }
