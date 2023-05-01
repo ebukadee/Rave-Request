@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+//hook to fetch the data from spotify API
 function useFetch(query, type = "tracks", result = "5", limit = "5") {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");

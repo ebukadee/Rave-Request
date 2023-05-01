@@ -40,12 +40,7 @@ const Preview = () => {
       </form>
       <div className="absolute w-[300px] mt-16 bg-mid max-h-[300px] overflow-y-auto rounded-b-xl break-words  ">
         <div className={!searchTerm ? "hidden" : "py-12"}>
-          {error ? (
-            <div>{error.message}: Don't panic,try again</div>
-          ) : loading ? (
-            <div>Loading...</div>
-          ) : (
-            data &&
+          {data ? (
             data?.tracks?.map((track) => (
               <Link to={`/songs/${track?.data?.id}`} key={track?.data?.id}>
                 <div className=" hover:bg-[#959595] transition-colors ease-in cursor-default">
@@ -66,6 +61,10 @@ const Preview = () => {
                 </div>
               </Link>
             ))
+          ) : error ? (
+            <div>{error.message}: Don't panic,try again</div>
+          ) : (
+            loading && <div>Loading...</div>
           )}
         </div>
       </div>
