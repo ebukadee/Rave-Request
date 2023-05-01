@@ -1,4 +1,4 @@
-
+import visualiser from "../assets/visualiser.svg"
 
 import { useLoaderData, useParams } from "react-router-dom";
 
