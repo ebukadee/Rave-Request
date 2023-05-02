@@ -66,10 +66,10 @@
     border-radius: 5px;
   }
 
-  audio::-webkit-media-controls-seek-back-button,
+  /* audio::-webkit-media-controls-seek-back-button,
   audio::-webkit-media-controls-seek-forward-button {
     display: block;
-  }
+  } */
 
   .bg {
     background: linear-gradient(rgba(255, 255, 242, 0.97) 40%, rgba(255, 255, 242, 0.97)) 40%, url('./src/assets/bg-image/bg.jpg');
