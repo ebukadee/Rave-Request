@@ -5,16 +5,18 @@ export default function Song() {
   const data = useLoaderData();
   return (
     <section className="w-full h-[100vh] bg-primary  ">
-      <div className=" h-full flex flex-col items-center justify-center">
+      <div className=" h-full flex flex-col gap-3 items-center justify-center">
         <img
           src={data?.tracks[0]?.album?.images[1]?.url}
           alt="Album cover"
-          className="rounded-full"
+          className="w-32 rounded-full"
         />
         <Visualiser />
 
-        <h3>{data?.tracks[0]?.name}</h3>
-        <h3>{data?.tracks[0]?.artists[0].name}</h3>
+        <div>
+          <h3>{data?.tracks[0]?.name}</h3>
+          <h3>{data?.tracks[0]?.artists[0].name}</h3>
+        </div>
         <audio controls>
           <source src={data?.tracks[0]?.preview_url} type="audio/mpeg" />
           Your browser does not support the audio element.

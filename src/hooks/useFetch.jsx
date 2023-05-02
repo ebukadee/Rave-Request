@@ -10,6 +10,7 @@ function useFetch(query, type = "tracks", result = "5", limit = "5") {
     (async function fetchData() {
       if (!query) {
         setLoading(false);
+        setData(null);
         return;
       }
       setLoading(true);

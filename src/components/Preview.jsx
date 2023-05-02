@@ -62,9 +62,11 @@ const Preview = () => {
               </Link>
             ))
           ) : error ? (
-            <div>{error.message}: Don't panic,try again</div>
+            <div className="text-center">
+              {error.message}: Don't panic,try again
+            </div>
           ) : (
-            loading && <div>Loading...</div>
+            loading && <div className="text-center">Loading...</div>
           )}
         </div>
       </div>
