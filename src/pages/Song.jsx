@@ -11,10 +11,10 @@ export default function Song() {
           alt="Album cover"
           className="w-32 rounded-full"
         />
-        <Visualiser />
+        <Visualiser  />
 
-        <div>
-          <h3>{data?.tracks[0]?.name}</h3>
+        <div className="flex flex-col items-center">
+          <h3 className="text-3xl font-bold">{data?.tracks[0]?.name}</h3>
           <h3>{data?.tracks[0]?.artists[0].name}</h3>
         </div>
       </div>

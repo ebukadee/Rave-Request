@@ -21,6 +21,7 @@ export default function Visualiser() {
       viewBox="0 0 1222 422"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="pr-7"
     >
       <path
         d="M7 211H8.77391"
