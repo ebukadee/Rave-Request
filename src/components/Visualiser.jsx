@@ -1,9 +1,13 @@
 export default function Visualiser() {
-  const data = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50];
+  const data = [10, 20, 30, 40, 50, 60, 50, 40, 30, 20, 10];
   const barHeight = 50;
 
   return (
-    <svg width="500" height="300">
+    <svg
+      width="500"
+      height="300"
+      style={{ display: "flex", alignItems: "center" }}
+    >
       {data.map((value, index) => (
         <rect
           key={index}
