@@ -12,6 +12,7 @@ export default function Visualiser() {
     }
     update(micInput) {
       // this.height = micInput
+      this.x++
     }
     draw(context) {
       context.fillStyle = this.color;
@@ -28,6 +29,8 @@ export default function Visualiser() {
     canvas.height = window.innerHeight;
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      bar1.update()
+
       bar1.draw(ctx);
       // console.log(bar1);
       requestAnimationFrame(animate);
