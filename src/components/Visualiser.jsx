@@ -3,11 +3,7 @@ export default function Visualiser() {
   const barHeight = 50;
 
   return (
-    <svg
-      width="500"
-      height="300"
-      style={{ display: "flex", alignItems: "center" }}
-    >
+    <svg width="500" height="300">
       {data.map((value, index) => (
         <rect
           key={index}
