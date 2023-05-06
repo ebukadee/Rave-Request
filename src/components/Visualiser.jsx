@@ -2,6 +2,44 @@ import { useRef, useEffect } from "react";
 
 export default function Visualiser() {
   const canvasRef = useRef(null);
+  class Microphone {
+    constructor() {
+      this.initialized = false;
+      navigator.mediaDevices
+        .getUserMedia({ audio: true })
+        .then(
+          function (stream) {
+            this.audioContext = new AudioContext();
+            this.microphone = this.audioContext.createMediaStreamSource(stream);
+            this.analyser = this.audioContext.createAnalyser();
+            this.analyser.fftSize = 256;
+            const bufferLength = this.analyser.frequencyBinCount;
+            this.dataArray = new Uint8Array(bufferLength);
+            this.microphone.connect(this.analyser);
+            this.initialized = true;
+          }.bind(this)
+        )
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    getSamples() {
+      this.analyser.getByteTimeDomainData(this.dataArray);
+      let normSamples = [...this.dataArray].map((e) => e / 128 - 1);
+      return normSamples;
+    }
+    getVolume() {
+      this.analyser.getByteTimeDomainData(this.dataArray);
+      let normSamples = [...this.dataArray].map((e) => e / 128 - 1);
+      let sum = 0;
+      for (let i = 0; i < normSamples.length; i++) {
+        sum += normSamples[i] * normSamples[i];
+      }
+      let volume = Math.sqrt(sum / normSamples.length);
+      return volume;
+    }
+  }
+
   class Bar {
     constructor(x, y, width, height, color) {
       this.x = x;
@@ -11,16 +49,23 @@ export default function Visualiser() {
       this.color = color;
     }
     update(micInput) {
-      // this.height = micInput
-      this.x++
+      this.height = micInput * 500;
     }
     draw(context) {
       context.fillStyle = this.color;
       context.fillRect(this.x, this.y, this.width, this.height);
     }
   }
-  const bar1 = new Bar(10, 10, 100, 200, "blue");
 
+  const microphone = new Microphone();
+  let bars = [];
+  let barWidth = window.innerWidth / 128;
+  function createBars() {
+    for (let i = 0; i < 128; i++) {
+      bars.push(new Bar(i * barWidth, window.innerHeight / 2, 4, 20, "black"));
+    }
+  }
+  createBars();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,17 +73,23 @@ export default function Visualiser() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      bar1.update()
-
-      bar1.draw(ctx);
-      // console.log(bar1);
+      if (microphone.initialized) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const samples = microphone.getSamples();
+        // const volume = microphone.getVolume()
+        bars.forEach((bar, i) => {
+          bar.update(samples[i]);
+          bar.draw(ctx);
+        });
+      }
       requestAnimationFrame(animate);
     }
     animate();
-  }, [bar1]);
+  }, [bars]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <canvas ref={canvasRef} className="flex justify-center items-center" />
+  );
 
   // const canvasRef = useRef(null);
 
