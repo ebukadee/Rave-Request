@@ -71,7 +71,7 @@ export default function Visualiser() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = 700;
-    canvas.height = 500;
+    canvas.height = 1500;
     function animate() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
