@@ -70,8 +70,8 @@ export default function Visualiser() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = 700;
-    canvas.height = 1500;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     function animate() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
