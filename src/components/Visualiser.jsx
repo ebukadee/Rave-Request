@@ -76,7 +76,6 @@ export default function Visualiser() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         const samples = microphone.getSamples();
-        // const volume = microphone.getVolume()
         bars.forEach((bar, i) => {
           bar.update(samples[i]);
           bar.draw(ctx);
