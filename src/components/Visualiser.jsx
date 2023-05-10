@@ -59,19 +59,17 @@ export default function Visualiser() {
 
   const microphone = new Microphone();
   let bars = [];
-  let barWidth = window.innerWidth / 128;
+  let barWidth = 1000 / 128;
   function createBars() {
     for (let i = 0; i < 128; i++) {
-      bars.push(new Bar(i * barWidth, window.innerHeight / 2, 4, 20, "black"));
+      bars.push(new Bar(i * barWidth, 400 / 2, 2, 20, "black"));
     }
   }
   createBars();
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth / 2;
-    canvas.height = 400;
+    const ctx = canvas.getContext("2d");   
     function animate() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -87,6 +85,6 @@ export default function Visualiser() {
   }, [bars]);
 
   return (
-    <canvas ref={canvasRef} />
+    <canvas ref={canvasRef} width={500} height={400} />
   );
 }
