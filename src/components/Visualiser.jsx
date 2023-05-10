@@ -70,8 +70,8 @@ export default function Visualiser() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth / 2;
+    canvas.height = 400;
     function animate() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -87,6 +87,6 @@ export default function Visualiser() {
   }, [bars]);
 
   return (
-    <canvas ref={canvasRef} className="flex justify-center items-center" />
+    <canvas ref={canvasRef} />
   );
 }
