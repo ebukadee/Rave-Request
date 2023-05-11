@@ -30,14 +30,8 @@ const Preview = () => {
           spellCheck="false"
           onChange={handleOnChange}
         />
-        <button
-          onClick={handleClick}
-          type="submit"
-          className="lg:w-full bg-dark lg:py-4 lg:mt-4 rounded-md  text-white"
-        >
-          Search
-        </button>
       </form>
+
       <div className="absolute w-[300px] mt-16 bg-mid max-h-[300px] overflow-y-hidden rounded-b-xl break-words  ">
         <div className={!searchTerm ? "hidden" : "py-10"}>
           {data ? (
@@ -65,9 +59,14 @@ const Preview = () => {
             <div className="text-center">
               {error.message}: Don't panic,try again
             </div>
+          ) : loading ? (
+            <div className="text-center">Loading...</div>
           ) : (
-            loading && <div className="text-center">Loading...</div>
+            <div className="text-center">
+              omo i don't know your problem ohh 🤷🏽‍♂️
+            </div>
           )}
+          
         </div>
       </div>
     </>
