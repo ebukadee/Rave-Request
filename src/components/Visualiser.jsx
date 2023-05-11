@@ -69,7 +69,7 @@ export default function Visualiser() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");   
+    const ctx = canvas.getContext("2d");
     function animate() {
       if (microphone.initialized) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -84,7 +84,5 @@ export default function Visualiser() {
     animate();
   }, [bars]);
 
-  return (
-    <canvas ref={canvasRef} width={500} height={400} />
-  );
+  return <canvas ref={canvasRef} width={1000} height={400} />;
 }
