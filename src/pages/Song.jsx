@@ -11,14 +11,14 @@ export default function Song() {
           alt="Album cover"
           className="w-32 rounded-full"
         />
-        <Visualiser  />
+        <Visualiser />
 
         <div className="flex flex-col items-center">
           <h3 className="text-3xl font-bold">{data?.tracks[0]?.name}</h3>
           <h3>{data?.tracks[0]?.artists[0].name}</h3>
         </div>
       </div>
-      <audio controls className="h-[20%] pb-8">
+      <audio controls loop={true} className="h-[20%] pb-8">
         <source src={data?.tracks[0]?.preview_url} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
